@@ -1,0 +1,33 @@
+Full Stack React & Firebase Tutorial- Build a social media app
+By Classsed and .freeCodeCamp.org
+URL: https://www.youtube.com/watch?v=m_u6P5k0vP0
+
+1) Introduction- 0:00
+    Technologies:
+        React, Firebase, Matetial-UI, Express.js, Redux- needed due to many 
+            components. Without this the components will passing data from one
+            component to the next(prop drilling) which is a bad practice on large 
+            projects. Redux creates a application wide state.
+2) Create and Read Data- 7:03
+    Add the firebase command line interface:
+        npm install -g firebase-tools
+
+    Login into Firebase:    
+        firebase login
+
+    Initialize Firebase:
+        init firebase
+    NOTE: At this point add the Functions feature.
+
+    To deploy firebase:
+        firebase deploy
+    The deploy will create a http endpoint to work within Postman. When the post 
+        route is executed, the helloWorld function runs from the index.js file 
+        wihtin the functions directory.
+    NOTE: Deploy everytime the index.js is changed to use new functions.
+
+    NOTE: As firebase deploy takes a long time to run, instead deploy locally with:
+        firebase serve
+
+    ISSUE: With local host had an issue when posting for the createScream() function:
+        Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
