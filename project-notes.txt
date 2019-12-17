@@ -53,3 +53,6 @@ Video Series Starts:
 
     within the functions directory, add firebase:
         npm i firebase
+
+
+5) Validation & Login Route- 1:03:23
