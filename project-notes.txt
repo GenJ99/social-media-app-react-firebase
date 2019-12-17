@@ -46,3 +46,10 @@ Video Series Starts:
     Add new express get() function(replace getScreams function), add api 
         export, then redeploy:
             firebase deploy
+
+
+4) User Registration- 42:37
+    Add Firebase and email/password authentication from Firebase Account.
+
+    within the functions directory, add firebase:
+        npm i firebase
