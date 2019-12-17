@@ -1,6 +1,8 @@
 Full Stack React & Firebase Tutorial- Build a social media app
 By Classsed and .freeCodeCamp.org
 URL: https://www.youtube.com/watch?v=m_u6P5k0vP0
+Video Series Starts:
+    https://www.youtube.com/watch?v=RkBfu-W7tt0&list=PLMhAeHCz8S38ryyeMiBPPUnFAiWnoPvWP&index=1
 
 1) Introduction- 0:00
     Technologies:
@@ -8,6 +10,8 @@ URL: https://www.youtube.com/watch?v=m_u6P5k0vP0
             components. Without this the components will passing data from one
             component to the next(prop drilling) which is a bad practice on large 
             projects. Redux creates a application wide state.
+
+            
 2) Create and Read Data- 7:03
     Add the firebase command line interface:
         npm install -g firebase-tools
@@ -31,3 +35,14 @@ URL: https://www.youtube.com/watch?v=m_u6P5k0vP0
 
     ISSUE: With local host had an issue when posting for the createScream() function:
         Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+    Quick Fix: downgrade to version 6.8:
+        Run "npm install -g firebase-tools@6.8.0"
+
+
+3) Express and Formatting Response- 27:57
+    Move to the functions folder and add express 
+        npm i express
+
+    Add new express get() function(replace getScreams function), add api 
+        export, then redeploy:
+            firebase deploy
