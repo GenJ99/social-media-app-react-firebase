@@ -56,3 +56,6 @@ Video Series Starts:
 
 
 5) Validation & Login Route- 1:03:23
+
+6) Authentication Middleware- 1:19:33
+    Authentication testing- 1:31:10
