@@ -61,3 +61,8 @@ Video Series Starts:
     Authentication testing- 1:31:10
 
 7) Refactoring and Organization- 1:33:10
+
+8) Image Upload- 1:48:48
+    Within the functions directory, run:
+        npm i busboy
+    2:08:30- Image testing in Postman

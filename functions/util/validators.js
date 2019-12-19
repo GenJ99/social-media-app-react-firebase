@@ -11,7 +11,7 @@ const isEmpty = string => {
   else return false;
 };
 
-// Data validation
+// Data validation SIGNUP
 exports.validateSignupData = data => {
   let errors = {};
 
@@ -32,12 +32,13 @@ exports.validateSignupData = data => {
   };
 };
 
-exports.ValidateLoginData = data => {
+// Data Validation LOGIN
+exports.validateLoginData = data => {
   let errors = {};
 
   // EMPTY String validation not working
-  if (isEmpty(user.email)) errors.email = 'Must not be empty';
-  if (isEmpty(user.password)) errors.password = 'Must not be empty';
+  if (isEmpty(data.email)) errors.email = 'Must not be empty';
+  if (isEmpty(data.password)) errors.password = 'Must not be empty';
 
   return {
     errors,
