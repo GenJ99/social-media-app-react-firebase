@@ -1,17 +1,19 @@
-// Email() helper function
+// Email() HELPER FUNCTION
 const isEmail = email => {
   const emailRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (email.match(emailRegEx)) return true;
   else return false;
 };
 
-// Empty() helper function
+//
+// Empty() HELPER FUNCTION
 const isEmpty = string => {
   if (string.trim() === '') return true;
   else return false;
 };
 
-// Data validation SIGNUP
+//
+// DATA VALIDATION SIGNUP
 exports.validateSignupData = data => {
   let errors = {};
 
@@ -32,11 +34,13 @@ exports.validateSignupData = data => {
   };
 };
 
-// Data Validation LOGIN
+//
+// DATA VALIDATION LOGIN
 exports.validateLoginData = data => {
   let errors = {};
 
   // EMPTY String validation not working
+  // FIXED Validation but check
   if (isEmpty(data.email)) errors.email = 'Must not be empty';
   if (isEmpty(data.password)) errors.password = 'Must not be empty';
 
@@ -44,4 +48,20 @@ exports.validateLoginData = data => {
     errors,
     valid: Object.keys(errors).length === 0 ? true : false
   };
+};
+
+// DATA VALIDATION USER DETAILS
+exports.reduceUserDetails = data => {
+  let userDetails = {};
+
+  if (!isEmpty(data.bio.trim())) userDetails.bio = data.bio;
+  if (!isEmpty(data.website.trim())) {
+    //http://website.com
+    if (data.website.trim().substring(0, 4) !== 'http') {
+      userDetails.website = `http://${data.website.trim()}`;
+    } else userDetails.website = data.website;
+  }
+  if (!isEmpty(data.location.trim())) userDetails.location = data.location;
+
+  return userDetails;
 };

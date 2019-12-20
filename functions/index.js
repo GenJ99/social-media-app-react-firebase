@@ -6,7 +6,13 @@ const FBAuth = require('./util/fbAuth');
 
 // HANDLERS
 const { getAllScreams, postOneScream } = require('./handlers/screams');
-const { signup, login, uploadImage } = require('./handlers/users');
+const {
+  signup,
+  login,
+  uploadImage,
+  addUserDetails,
+  getAuthenticatedUser
+} = require('./handlers/users');
 
 // SCREAM ROUTES
 app.get('/screams', getAllScreams);
@@ -15,7 +21,9 @@ app.post('/scream', FBAuth, postOneScream);
 // USERS ROUTES
 app.post('/signup', signup);
 app.post('/login', login);
-app.post('user/image', FBAuth, uploadImage);
+app.post('/user/image', FBAuth, uploadImage);
+app.post('/user', FBAuth, addUserDetails);
+app.get('/user', FBAuth, getAuthenticatedUser);
 
 // https://baseurl.com/api/
 exports.api = functions.https.onRequest(app);

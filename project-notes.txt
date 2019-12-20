@@ -66,3 +66,5 @@ Video Series Starts:
     Within the functions directory, run:
         npm i busboy
     2:08:30- Image testing in Postman
+
+9) Add and Get User Profile Details- 2:13:45
