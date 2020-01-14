@@ -72,4 +72,10 @@ Video Series Starts:
 10) Getting and Commenting On Scream- 2:33:15
     Not Working?
 
-11) Like, Unlike, and Delete Post- 2:33:15
+11) Like, Unlike, and Delete Post- 2:56:38
+
+12) Create and Get Notifications- 3:25:38
+Upon adding database triggers, from the functions folder deploy firebase:
+    firebase deploy
+
+13) Finishing Up Cloud Functions- 3:58:11
