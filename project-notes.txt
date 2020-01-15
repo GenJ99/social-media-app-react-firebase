@@ -79,3 +79,13 @@ Upon adding database triggers, from the functions folder deploy firebase:
     firebase deploy
 
 13) Finishing Up Cloud Functions- 3:58:11
+
+14) Getting Started with React- 4:23:46
+    Create react app:
+        create-reacte-app socialape-client
+    Within the socialape-client, add router-com:
+        npm i react-router-dom
+    Install material-ui in socialape-client:
+        npm i --save @material-ui/core
+
+Left off at 
